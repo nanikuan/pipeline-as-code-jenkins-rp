@@ -54,7 +54,6 @@ pipeline {
                 stage('Create Container'){
                     steps{
                         sh 'docker run -d -it --name=apche2-21051176-container apcahe2-21051176-image2 /bin/bash'
-'
                         
                     }
                 }
