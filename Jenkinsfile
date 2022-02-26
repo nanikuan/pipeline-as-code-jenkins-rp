@@ -93,7 +93,6 @@ pipeline {
         stage('Stage 5-21051176') {
             when{
                 not{
-" 
                 }
             }
             steps {
