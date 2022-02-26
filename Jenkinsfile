@@ -53,7 +53,7 @@ pipeline {
             parallel {
                 stage('Create Container'){
                     steps{
-                        sh 'docker run -d -it --name=stage2-21051176-container apache2-21051176-image /bin/bash'
+                        sh 'docker run --detach -it --name=stage2-21051176-container apache2-21051176-image /bin/bash'
                         
                     }
                 }
