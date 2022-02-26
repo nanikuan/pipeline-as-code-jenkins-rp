@@ -91,10 +91,7 @@ pipeline {
         }
         
         stage('Stage 5-21051176') {
-            when{
-                not{
-                }
-            }
+
             steps {
                 sh """
                 echo "work released - 21051176"
