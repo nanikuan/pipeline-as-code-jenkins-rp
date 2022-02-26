@@ -63,7 +63,7 @@ pipeline {
             parallel {
                 stage('Create Container'){
                     steps{
-                        sh 'docker run --detach -it --name=apche2-21051176-container2 apcahe2-21051176-image2 /bin/bash'
+                        sh 'docker run --detach -it --name=apche2-21051176-container3 apcahe2-21051176-image2 /bin/bash'
                         
                     }
                 }
