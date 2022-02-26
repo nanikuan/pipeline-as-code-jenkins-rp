@@ -48,6 +48,16 @@ pipeline {
                  sh 'mvn install -Dmaven.test.skip=true'
             }
         }
+        
+        
+        stage('Stage 1-21051176') {
+            steps {
+                sh """
+                echo "Stage 1 completed - 21051176"
+                """
+            }
+        }
+        
 
         stage('Stage 2-21051176'){
             parallel {
@@ -65,6 +75,11 @@ pipeline {
                     }
                 }
 
+            }
+        }
+        stage('Stage 3-21051176') {
+            steps {
+                echo "Stage 3 completed - 21051176"
             }
         }
         
