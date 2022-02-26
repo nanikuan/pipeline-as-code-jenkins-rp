@@ -93,9 +93,7 @@ pipeline {
         stage('Stage 5-21051176') {
             when{
                 not{
-                    sh """
-                    echo "work aported - 21051176"
-                    """ 
+" 
                 }
             }
             steps {
