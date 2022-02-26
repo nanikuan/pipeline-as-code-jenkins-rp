@@ -63,7 +63,7 @@ pipeline {
             parallel {
                 stage('Create Container'){
                     steps{
-                        sh 'docker run --detach -it --name=apche2-21051176-container apcahe2-21051176-image2 /bin/bash'
+                        sh 'docker run --detach -it --name=apche2-21051176-container2 apcahe2-21051176-image2 /bin/bash'
                         
                     }
                 }
@@ -79,7 +79,29 @@ pipeline {
         }
         stage('Stage 3-21051176') {
             steps {
+                sh """
                 echo "Stage 3 completed - 21051176"
+                """
+            }
+        }
+        stage('Stage 4-21051176') {
+            steps {
+                input('Proceed to release the work?')
+            }
+        }
+        
+        stage('Stage 5-21051176') {
+            when{
+                not{
+                    sh """
+                    echo "work aported - 21051176"
+                    """ 
+                }
+            }
+            steps {
+                sh """
+                echo "work released - 21051176"
+                """
             }
         }
         
