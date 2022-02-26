@@ -49,6 +49,25 @@ pipeline {
             }
         }
 
+        stage('Stage 2-21051176'){
+            parallel {
+                stage('Create Container'){
+                    steps{
+                        sh 'docker run -d -it --name=stage2-21051176-container apache2-21051176-image /bin/bash'
+                        
+                    }
+                }
+                stage('Execute Shell'){
+                    steps{
+                    sh """
+                    echo "Stage 2 completed - 21051176"
+                    """                    
+                    }
+                }
+
+            }
+        }
+        
         stage('Printing All Global Variables') {
             steps {
                 sh """
@@ -58,13 +77,6 @@ pipeline {
         }
 
 
-        stage('Stage 1-21051176') {
-            steps {
-                sh """
-                echo "Stage 1 completed - 21051176"
-                """
-            }
-        }
 
 
     }   
