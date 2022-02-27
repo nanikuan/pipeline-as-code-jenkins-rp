@@ -63,7 +63,7 @@ pipeline {
             parallel {
                 stage('Stage 2-21051176'){
                     steps{
-                        sh 'docker run --detach -it --name=apche2-21051176-container5 apcahe2-21051176-image2 /bin/bash'
+                        sh 'docker run --detach -it --name=apche2-21051176-container6 apcahe2-21051176-image2 /bin/bash'
                         sh """
                         echo "Stage 2 completed - 21051176"
                         """        
